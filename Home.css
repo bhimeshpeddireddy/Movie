@@ -1,0 +1,334 @@
+:root{
+    --pink: #DE5D83;
+    --black: #101116;
+    --gray: #bebebe;
+    --light-gray: #d9d9d9;
+    --comment-box: #171B27;
+    --comment:#555D68;
+    --comment-date:#8A8A8A;
+    --warning:#E22C2C;
+    --yellow:#EEE62F;
+}
+
+
+
+
+a{
+    text-decoration: none;
+}
+i{
+    cursor: pointer;
+}
+li{
+    list-style-type: none;
+}
+img{
+    cursor: pointer;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: 'Montserrat',sans-serif;
+    background-image:url("./background/home1.PNG");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    z-index: 55;
+}
+.container .header{
+    width: 100%;
+    height: 70px;
+    padding: 2rem 10%;
+    z-index: 55;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo h1{
+    color: var(--pink);
+    font-size: 2.4rem;
+    cursor: pointer;
+    font-family: 'Lemon',cursive;
+}
+
+
+/* ----------------- */
+.slider-container{
+    width: 100%;
+    margin: 10% auto 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.slider-container .owl-container{
+    width: 90%;
+    margin: 1.5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.slider-container .slider-content{
+    margin: 0 5%;
+}
+.slider-content h1{
+    color: #fff;
+    font-weight: 600;
+}
+.owl-theme{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards{
+    width: 200px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.cards .card-img{
+    width: 200px;
+    height: 250px;
+    position: relative;
+}
+
+.card-img img{
+    width: 100%;
+}
+.card-img .img-title{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 45px;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.img-title h4{
+    font-size: 0.8rem;
+}
+.img-title p{
+    font-size: 0.6rem;
+}
+.cards .card-title{
+    text-align: center;
+    margin-top: 0.7rem;
+}
+
+.card-title h3{
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.card-title p{
+    color: var(--comment-date);
+    font-weight: 400;
+    font-size: 0.65rem;
+    margin-top: 0.4rem;
+}
+.owl-nav{
+    display: none;
+}
+.owl-dot{
+    display: none;
+}
+.owl-stage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+/* --------------- */
+.movies{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.movies-title{
+    width: 90%;
+    margin: 0 auto;
+}
+.movies-title h1{
+    color: #fff;
+    font-weight: 600;
+}
+
+.movies-ctg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 90%;
+    margin: 1.5rem auto;
+}
+
+.movies-ctg .btn{
+    margin-top: 1rem;
+    width: 160px;
+    height: 40px;
+    background-color: #d9d9d9;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border: 3px solid #d9d9d9;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Montserrat',sans-serif;
+    color: var(--black);
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+}
+
+.movies-ctg .btn:hover{
+    border: 3px solid var(--pink);
+    color: var(--pink);
+}
+
+.movies-card{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin: 1rem 5%;
+}
+
+
+
+
+
+
+
+@media(max-width:1200px){
+    .header .navBar .nav-items{
+        display: none;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--pink);
+        transition: top 1s ease;
+        -webkit-transition: top 1s ease;
+        -moz-transition: top 1s ease;
+        -ms-transition: top 1s ease;
+        -o-transition: top 1s ease;
+    }
+    .header .navBar .list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header .navBar .list a{
+        font-size: 1.35rem;
+    }
+    .navBar .list a:hover{
+        color: var(--comment-box);
+    }
+    .header .navBar .list .close-btn i{
+        display: block;
+    }
+    .header .navBar .open-btn{
+        display: block;
+    }
+    .navBar .user{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 55;
+    }
+    .navBar .user li i{
+        font-size: 1.5rem;
+    }
+    .navBar .user li i:hover{
+        color: var(--comment-box);
+    }
+
+    .movie-btn .btn-1,
+    .movie-btn .btn-2{
+        width: 125px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .movies-ctg{
+        width: 100%;
+        padding:  0 5%;
+    }
+    .movies-ctg .btn{
+        width: 110px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    .movies-card{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 1rem;
+    }
+
+
+   
+   
+}
+
+
+@media(max-width:768px){
+    .movies-ctg .btn{
+        width: 90px;
+        height: 20px;
+        font-size: 0.6rem;
+        margin: 0.5rem;
+    }
+    .movies-card{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(6,1fr);
+        gap: 0.8rem;
+    }
+    
+}
